@@ -37,7 +37,7 @@ const DocsLayout = ({ data }) => {
             <Layout hideFooter size={size}>
               <SEO title={mdx.frontmatter.title} />
               <Box width="100%" gap="medium" pad={{ bottom: "large" }}>
-                <Box>
+                <Box gap="small">
                   <Text
                     size="large"
                     style={{
@@ -45,7 +45,7 @@ const DocsLayout = ({ data }) => {
                       textTransform: "capitalize",
                     }}
                   >
-                    {mdx.fields.instanceName}
+                    {mdx.fields.instanceName.split("-").join(" ")}
                   </Text>
                   <Heading level={1} margin={{ vertical: "0" }}>
                     {mdx.frontmatter.title}
